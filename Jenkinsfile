@@ -36,7 +36,6 @@ pipeline {
         sh "docker rm devops"
         sh "docker run -d -p 80:80 --name devops $imagename:$BUILD_NUMBER"
         sh "docker rmi $imagename:$BUILD_NUMBER"
-         sh "docker rmi $imagename:latest"
 
       }
     }
